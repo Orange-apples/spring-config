@@ -1,0 +1,14 @@
+﻿server:
+  port: 8001
+spring:
+  application:
+    name: edu-register
+eureka:
+  instance:
+    hostname: register-7001.com
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      #单机版
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
